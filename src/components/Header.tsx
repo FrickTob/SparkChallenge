@@ -1,13 +1,12 @@
 import React from 'react'
-import './header.css'
 
 const Header = () => {
   return (
-    <div className='headerBox'>
-      <div className='headerTile'>1</div>
-      <div className='headerTile'>2</div>
-      <div className='headerTile'>3</div>
-      <div className='headerTile'>4</div>
+    <div className='flex flex-row justify-evenly'>
+      <div className='w-full border-2 border-black'>1</div>
+      <div className='w-full border-2 border-black'>2</div>
+      <div className='w-full border-2 border-black'>3</div>
+      <div className='w-full border-2 border-black'>4</div>
     </div>
   )
 }
