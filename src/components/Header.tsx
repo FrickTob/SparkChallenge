@@ -1,12 +1,14 @@
 import React from 'react'
 
 const Header = () => {
+
+  const headerTitles = ["Search", "Resources", "About Us"]
+
   return (
-    <div className='flex flex-row justify-evenly'>
-      <div className='w-full border-2 border-black'>1</div>
-      <div className='w-full border-2 border-black'>2</div>
-      <div className='w-full border-2 border-black'>3</div>
-      <div className='w-full border-2 border-black'>4</div>
+    <div className='flex flex-row fixed left-0 right-0 h-20 pl-[5%] bg-red-600'>
+      {headerTitles.map((title) => 
+        <div className='w-20 grid items-center'>{title}</div>
+      )}
     </div>
   )
 }
