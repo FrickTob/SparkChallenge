@@ -7,10 +7,23 @@ import ResourcesSection from './components/ResourcesSection';
 import AboutUsSection from './components/AboutUsSection';
 
 function App() {
+
+  let scrollToElement = (elementID : string) => {
+    let element : HTMLElement | null = null;
+    if (elementID === "Search") {
+      element = document.getElementById("searchSection");
+    } else if (elementID === "Resources") {
+      element = document.getElementById("resourcesSection");
+    } else if (elementID === "About Us") {
+      element = document.getElementById("aboutUsSection");
+    }
+    if (!element) return;
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <div className="App">
-      <Header />
-      <div className='h-20 bg-transparent'></div>
+      <Header scrollToElement={scrollToElement}/>
       <SearchSection />
       <ResourcesSection />
       <AboutUsSection />
