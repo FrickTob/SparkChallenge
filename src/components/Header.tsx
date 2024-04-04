@@ -1,5 +1,4 @@
 import React from 'react'
-import HeaderHeight from '../constants'
 
 interface HeaderProps {
   scrollToElement: (elementID : string) => void
@@ -10,7 +9,7 @@ const Header : React.FC<HeaderProps> = ({scrollToElement}) => {
 
 
   return (
-    <div className={`flex flex-row fixed left-0 right-0 h-[${HeaderHeight}vh] pl-[5%] bg-red-600`}>
+    <div className={`flex flex-row fixed left-0 right-0 h-[5vh] pl-[5%] bg-red-600`}>
       {headerTitles.map((title) => 
         <div onClick={() => scrollToElement(title)} className='w-1/5 grid items-center hover:font-bold hover:cursor-pointer'>{title}</div>
       )}
