@@ -11,14 +11,7 @@ function App() {
   let [textStrings, setTextStrings]= useState<TextStrings>(new EnglishStrings());
 
   let scrollToElement = (elementID : string) => {
-    let element : HTMLElement | null = null;
-    if (elementID === "Search") {
-      element = document.getElementById("searchSection");
-    } else if (elementID === "Resources") {
-      element = document.getElementById("resourcesSection");
-    } else if (elementID === "About Us") {
-      element = document.getElementById("aboutUsSection");
-    }
+    let element = document.getElementById(elementID);
     if (!element) return;
     element.scrollIntoView({ behavior: "smooth" });
   }

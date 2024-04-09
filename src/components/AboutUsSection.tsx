@@ -7,8 +7,8 @@ interface AboutUsSectionProps {
 
 const AboutUsSection : React.FC<AboutUsSectionProps> = ({textStrings}) => {
   return (
-    <div id='aboutUsSection' className='h-screen'>
-      <div className={`h-[5vh]`}></div>
+    <div id={`${textStrings.aboutUs}Section`} className='h-screen'>
+      <div className={`h-16`}></div>
       About Us
     </div>
   )

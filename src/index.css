@@ -15,3 +15,15 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold text-start;
+  }
+  h3 {
+    @apply text-lg font-bold text-start;
+  }
+  h4 {
+    @apply text-2xl text-start italic;
+  }
+}

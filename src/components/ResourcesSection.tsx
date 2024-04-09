@@ -7,8 +7,8 @@ interface ResourcesSectionProps {
 
 const ResourcesSection : React.FC<ResourcesSectionProps> = ({textStrings}) => {
   return (
-    <div id="resourcesSection" className='h-screen'>
-      <div className={`h-[5vh]`}></div>
+    <div id={`${textStrings.resources}Section`} className='h-screen'>
+      <div className={`h-16`}></div>
       Resources Section
     </div>
   )

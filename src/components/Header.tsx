@@ -8,19 +8,21 @@ interface HeaderProps {
 }
 const Header : React.FC<HeaderProps> = ({textStrings, setTextStrings, scrollToElement}) => {
 
-  const headerTitles = [, textStrings.resources, textStrings.contact, textStrings.aboutUs]
+  const headerTitles = [textStrings.search, textStrings.resources, textStrings.contact, textStrings.aboutUs]
 
 
   return (
-    <div className={`flex flex-row fixed left-0 right-0 h-[5vh] pl-[5%] bg-red-600`}>
+    <div className={`flex flex-row fixed left-0 right-0 h-16 pl-[5%] bg-[#805252] text-white`}>
+      <div className='pl-10'></div>
       {headerTitles.map((title) => 
-        <div onClick={() => scrollToElement(title!)} className='w-1/5 grid items-center hover:font-bold hover:cursor-pointer'>{title}</div>
+        <h3 onClick={() => scrollToElement(`${title}Section`)} className='w-1/5 grid items-center hover:font-bold hover:cursor-pointer'>{title}</h3>
       )}
       <div className='flex-1 flex justify-end items-center pr-[5%]'>
-        <p>
-          <span onClick={() => setTextStrings(new EnglishStrings())} className='hover:font-bold hover:cursor-pointer'>EN</span>|
-          <span onClick={() => setTextStrings(new SpanishStrings())} className='hover:font-bold hover:cursor-pointer'>ES</span>|
-          <span onClick={() => setTextStrings(new FrenchStrings())} className='hover:font-bold hover:cursor-pointer'>FR</span></p>
+        <div>
+          <h3 onClick={() => setTextStrings(new EnglishStrings())} className='hover:font-bold hover:cursor-pointer inline p-1'>EN</h3>|
+          <h3 onClick={() => setTextStrings(new SpanishStrings())} className='hover:font-bold hover:cursor-pointer inline p-1'>ES</h3>|
+          <h3 onClick={() => setTextStrings(new FrenchStrings())} className='hover:font-bold hover:cursor-pointer inline p-1'>FR</h3>
+        </div>
         </div>
     </div>
   )
