@@ -1,13 +1,18 @@
 import React from 'react'
 import Header from './Header'
+import {TextStrings } from '../Strings'
 
-const SearchSection = () => {
+interface SearchSectionProps {
+  textStrings: TextStrings
+}
+
+const SearchSection : React.FC<SearchSectionProps> = ({textStrings}) => {
   const greetingText = "Hi"
   const titleText = "Immigrant Resources Finder"
   const locations = "Grinnell, Tama, Brooklyn"
   const searchPlaceHolderText = "Search by zipcode"
 
-  const resourceButtons = ["Health Care", "Work", "Family"]
+  const resourceButtons = [textStrings.healthCare, textStrings.work, textStrings.family]
 
   const searchSectionPercent = "70"
   const categoriesSectionPercent = "30"
@@ -18,11 +23,11 @@ const SearchSection = () => {
         <div className={`h-3/5 grid place-items-center bg-green-200`}>
           <div className='w-3/5 h-4/5 bg-orange-200 flex flex-col justify-evenly'>
             <div className='w-1/2  bg-yellow-300'> 
-            <h1>{titleText}</h1>
-            <p>{locations}</p>
+            <h1>{textStrings.homeText}</h1>
+            <p>{textStrings.locations}</p>
             </div>
             <div>
-            <input type='search' className='w-full text-slate-400' placeholder={searchPlaceHolderText} />
+            <input type='search' className='w-full text-slate-400' placeholder={textStrings.searchPlaceholder} />
             </div>
           </div>
         </div>
